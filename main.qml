@@ -148,26 +148,27 @@ ApplicationWindow {
                         color: 'transparent'
                         Text {
                             id: textCurrentAxis
-                            anchors.centerIn: parent
+                            anchors.left: parent.left
+                            anchors.leftMargin: 2
                             color: 'white'
                             font.pointSize: root.width / 35
                             text: 'ACCEL 1'
-                            padding: 8       
-                            Image {
-                                source: "./images/settings.png"
-                                anchors.left: parent.right
-                                anchors.leftMargin: 10
-                               
-                                anchors.verticalCenter: parent.verticalCenter
-                                width: parent.width/4
-                                height: width
-                                RoundButton{
-                                    anchors.fill: parent
-                                    Material.background: 'transparent'
-                                }
-                                
-                            }          
+                            padding: 8                
                         }
+                        Image {
+                            source: "./images/settings.png"
+                            anchors.right: parent.right
+                            anchors.rightMargin: 10
+                            
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: parent.width/6
+                            height: width
+                            RoundButton{
+                                anchors.fill: parent
+                                Material.background: 'transparent'
+                            }
+                                
+                        } 
                     }
                     Rectangle {
                         id: textBx
@@ -306,6 +307,7 @@ ApplicationWindow {
                             id: base
                             color: '#F44336'
                             rotation: angleTarget
+                            antialiasing: true
                             anchors.verticalCenter: wheel.verticalCenter
                             anchors.horizontalCenter: wheel.horizontalCenter
                             height: 20
@@ -314,6 +316,7 @@ ApplicationWindow {
                             Rectangle {
                                 id: needle
                                 color: '#4CAF50'
+                                antialiasing: true
                                 anchors.bottom: parent.verticalCenter
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 height: wheel.height/2
@@ -325,6 +328,7 @@ ApplicationWindow {
                             id: base3
                             color: '#F44336'
                             rotation: angleCurrent
+                            antialiasing: true
                             anchors.verticalCenter: wheel.verticalCenter
                             anchors.horizontalCenter: wheel.horizontalCenter
                             height: 20
@@ -333,6 +337,7 @@ ApplicationWindow {
                             Rectangle {
                                 id: needle2
                                 color: '#F44336'
+                                antialiasing: true
                                 anchors.bottom: parent.verticalCenter
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 height: wheel.height/2
@@ -356,26 +361,26 @@ ApplicationWindow {
                         color: 'transparent'
                         Text {
                             id: textCurrentAxis2
-                            anchors.centerIn: parent
+                            anchors.left: parent.left
                             color: 'white'
                             font.pointSize: root.width / 35
                             text: 'TEMP'
-                            padding: 8
-                            Image {
-                                source: "./images/settings.png"
-                                anchors.left: parent.right
-                                anchors.leftMargin: 10
-                               
-                                anchors.verticalCenter: parent.verticalCenter
-                                width: parent.width/3
-                                height: width
-                                RoundButton{
-                                    anchors.fill: parent
-                                    Material.background: 'transparent'
-                                }
-                                
-                            }              
+                            padding: 8            
                         }
+                        Image {
+                            source: "./images/settings.png"
+                            anchors.right: parent.right
+                            // anchors.leftMargin: 10
+                            
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: parent.width/6
+                            height: width
+                            RoundButton{
+                                anchors.fill: parent
+                                Material.background: 'transparent'
+                            }
+                                
+                        }  
                     }
                     Rectangle {
                         id: textBx2
